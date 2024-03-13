@@ -1,0 +1,26 @@
+player1=input("Hola Usuario, ingrese Nombre de Player 1")
+select1=input(f"{player1} Escriba 1 Xpara X y 2 para ser O")
+player2=input("Ingrese Nombre de Player 2")
+if select1 == "X":
+turn1 = "X"
+
+elif select1 != "X":
+input("Eso no es lo pedido. Escriba 1 para X y 2 para ser O")
+else:
+turn2 = "O"
+if select1 == "O":
+turn1 = "O"
+elif select1 != "X":
+input("Eso no es lo pedido. Escriba 1 para X y 2 para ser O")
+else:
+turn2 = "X"
+input("Comienza X")
+print(turn1, turn2)
+print(player1, player2)
+
+'''while player1
+turn2= "X"
+a= [],b= [],c= [],d= [],e= [],f= [],g= [],h= [],i= []
+print(f'|{a}|{b}|{c}|')
+print(f"|{d}|{e}|{f}|")
+print(f"|{g}|{h}|{i}|")'''
