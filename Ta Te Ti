@@ -8,18 +8,18 @@ def imp_board(board):
 
 def select(token_1,token_2,p1):
     if token_1 == '':
-        print(f'{p1}Select a for X and s for O : ')
+        print(f'{p1} Select a for X and s for O : ')
         token_1 = input()
-    elif token_1 == "a":
-        token_1 = "X"
-        token_2 = "O"
-    elif token_1 == "s":
-        token_1 = "O"
-        token_2 = "X"
-    else:
-        print(f'{p1}Select a for X and s for O : ')
-        token_1 = input()
-        select(token_1,token_2,p1)
+        if token_1 == "a":
+            token_1 = "X"
+            token_2 = "O"
+        elif token_1 == "s":
+            token_1 = "O"
+            token_2 = "X"
+        else:
+            print(f'{p1} Select a for X and s for O : ')
+            token_1 = input()
+            select(token_1,token_2,p1)
     return token_1,token_2
 
 def change_board(board,position,player):
@@ -123,12 +123,7 @@ while turn < 9:
         p1 = input()
         print('Name player 2: ')
         p2 = input()
-    select(token_1,token_2)
-    if p1 == '':
-        print('Name player 1: ')
-        p1 = input()
-        print('Name player 2: ')
-        p2 = input()
+        select(token_1,token_2,p1)
     else:
         if turn_1:
             print(p1 +  ', select position')
