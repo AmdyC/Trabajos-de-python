@@ -1,0 +1,41 @@
+a="‎ "
+b="‎ "
+c="‎ "
+d="‎ "
+e="‎ "
+f="‎ "
+pal=["arbol"]
+def func():
+    for i in range (len(pal)):
+        print (pal[i])
+func()
+'''
+tu=input("adivine la palabra")
+if tu == "a":
+    a="O"
+elif tu!="a": 
+    tu1=input("escriba otra letra")
+    '''
+
+    
+'''
+b="/"
+c="|"
+d="\ "
+e="/"
+f="\ "
+'''
+'''
+print("ㅤㅤ________")
+print("‎ ‎ ‎ |ㅤㅤㅤ‎ ‎ |")
+print("‎ ‎ ‎ O‎ ‎ ‎ ‎ ‎ ‎ ‎ |")
+print("‎ ‎ /|\ㅤㅤㅤ‎ |")
+print("‎ ‎ /‎ \‎ ‎ ‎ ‎ ‎ ‎ |")
+print("‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ___|___")
+'''
+print("ㅤㅤ________")
+print("‎ ‎ ‎ |ㅤㅤㅤ‎ ‎ |")
+print(f"‎ ‎ ‎ {a}‎‎ ‎ ‎ ‎ ‎ ‎ ‎ |")
+print(f"‎ ‎ {b}{c}{d}‎‎ ‎  ‎‎ ‎ ‎ ‎ |")
+print(f"‎ ‎ ‎{e} ‎{f} ‎ ‎ ‎ ‎   ‎ ‎ ‎  |")
+print(f"‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ___|___")
