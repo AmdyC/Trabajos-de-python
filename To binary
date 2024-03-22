@@ -1,0 +1,9 @@
+import math
+def ToBinary(nmb) :
+    for i in range (nmb,nmb):
+        nmb=math.floor(nmb/2)
+    else:
+        nmb=nmb%2
+    return nmb
+def
+print (ToBinary(13))
