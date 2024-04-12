@@ -1,0 +1,12 @@
+def is_anagram(cadena, arreglo_cadenas):
+    resultado = []
+    for palabra in arreglo_cadenas:
+        if sorted(cadena) == sorted(palabra):
+            resultado.append(palabra)
+    return resultado
+
+# Ejemplo de uso
+cadena_input = input("Ingresa una cadena: ")
+arreglo_input = input("Ingresa un arreglo de cadenas separadas por espacios: ").split()
+resultado = is_anagram(cadena_input, arreglo_input)
+print("Cadenas que son anagramas de", cadena_input, ":", resultado)
