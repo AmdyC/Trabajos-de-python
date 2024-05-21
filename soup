@@ -1,0 +1,17 @@
+import requests,pyperclip
+from bs4 import BeautifulSoup
+txt=open('Gnomo.txt','wb',encoding='utf-8')
+url=pyperclip.paste()
+while True:
+    if url != pyperclip.paste():
+        url=pyperclip.paste()
+        html=requests.get(url)
+        html.raise_for_status()
+        if html.status_code == 200:
+            te=BeautifulSoup(html.text,'html.parser')
+            txt.write(te.prettify())
+            txt.close()
+            # https://www.enciclopediadnd.es/reglas/razas/gnomo/
+            print('Lets go')
+    else:
+        print('ERROR')
