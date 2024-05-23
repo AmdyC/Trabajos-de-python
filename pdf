@@ -1,0 +1,33 @@
+import os,requests,pyperclip
+from bs4 import BeautifulSoup
+
+url=pyperclip.paste()
+while True:
+    if url != pyperclip.paste():
+        url=pyperclip.paste()
+        sthing=requests.get(url)
+        sthing.raise_for_status()
+        if sthing.status_code == 200:
+            html = BeautifulSoup(sthing.text, 'html.parser')
+            links = html.find_all('a')
+         for link in links:
+                href = link.get('href')
+                if href is not None and '.pdf' in href:
+                    pdf_links.append(href)
+                    print('SIGUIO')
+            name = 0 
+            for pdf in pdf_links:
+                if pdf is not None:
+                    pdf_response = requests.get(pdf)
+                    pdf_response.raise_for_status()
+                    filename = os.path.join('subdirectory', f'{name}.pdf')
+                    file = open(filename, 'wb')
+                    file.write(pdf_response.content)
+                    file.close()
+                    name += 1
+                    print('TERMINO')
+                if name == 15:
+                    break
+        # https://openlibrary.org/  https://www.nasa.gov/ebooks/earth/
+        else:
+            print('ERROR: No se pudo obtener el HTML')
